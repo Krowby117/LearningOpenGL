@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		ABF15A292EB82D3300208B33 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF15A282EB82D3300208B33 /* OpenGL.framework */; };
+		ABF15A2B2EB82D3900208B33 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF15A2A2EB82D3900208B33 /* Cocoa.framework */; };
+		ABF15A2D2EB82D3F00208B33 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF15A2C2EB82D3F00208B33 /* IOKit.framework */; };
+		ABF15A2F2EB82D4700208B33 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF15A2E2EB82D4700208B33 /* CoreVideo.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		ABE1750C2EB827DA0016F4F9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		ABE1750E2EB827DA0016F4F9 /* LearningOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearningOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF15A282EB82D3300208B33 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		ABF15A2A2EB82D3900208B33 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		ABF15A2C2EB82D3F00208B33 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		ABF15A2E2EB82D4700208B33 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +46,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF15A2F2EB82D4700208B33 /* CoreVideo.framework in Frameworks */,
+				ABF15A2D2EB82D3F00208B33 /* IOKit.framework in Frameworks */,
+				ABF15A2B2EB82D3900208B33 /* Cocoa.framework in Frameworks */,
+				ABF15A292EB82D3300208B33 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				ABE175102EB827DA0016F4F9 /* LearningOpenGL */,
+				ABF15A272EB82D3300208B33 /* Frameworks */,
 				ABE1750F2EB827DA0016F4F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +71,17 @@
 				ABE1750E2EB827DA0016F4F9 /* LearningOpenGL */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ABF15A272EB82D3300208B33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABF15A2E2EB82D4700208B33 /* CoreVideo.framework */,
+				ABF15A2C2EB82D3F00208B33 /* IOKit.framework */,
+				ABF15A2A2EB82D3900208B33 /* Cocoa.framework */,
+				ABF15A282EB82D3300208B33 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,16 +271,30 @@
 		ABE175162EB827DA0016F4F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/dependencies/include/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LearningOpenGL/dependencies/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/include/**";
 			};
 			name = Debug;
 		};
 		ABE175172EB827DA0016F4F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/dependencies/include/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LearningOpenGL/dependencies/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/include/**";
 			};
 			name = Release;
 		};
