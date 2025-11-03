@@ -22,8 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "/Users/gavindominique/Desktop/cppStuff/LearningOpenGL/LearningOpenGL/dependencies/include/glad/glad.h"
-//include <glad/glad.h>
+#include <glad/glad.h>
 
 static void* get_proc(const char *namez);
 

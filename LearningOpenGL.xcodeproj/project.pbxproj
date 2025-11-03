@@ -205,12 +205,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/dependencies/include/**";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/dependencies/include/**";
 			};
 			name = Debug;
 		};
@@ -260,11 +262,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/dependencies/include/**";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/dependencies/include/**";
 			};
 			name = Release;
 		};
@@ -273,12 +277,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/dependencies/include/**";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/assets/**",
+					"$(PROJECT_DIR)/dependencies/include/**",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/dependencies/**",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LearningOpenGL/dependencies/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/include/**";
 			};
 			name = Debug;
@@ -288,12 +298,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/dependencies/include/**";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/assets/**",
+					"$(PROJECT_DIR)/dependencies/include/**",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/dependencies/**",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LearningOpenGL/dependencies/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/include/**";
 			};
 			name = Release;
