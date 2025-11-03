@@ -2,8 +2,6 @@
 //  main.cpp
 //  LearningOpenGL
 //
-//  Created by Krowby on 11/2/25.
-//
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
