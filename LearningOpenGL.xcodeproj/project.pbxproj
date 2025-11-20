@@ -33,9 +33,22 @@
 		ABF15A2E2EB82D4700208B33 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AB61665D2ECD066800234776 /* Exceptions for "LearningOpenGL" folder in "LearningOpenGL" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				old_sections/s1_Getting_Started/s1_main.cpp,
+			);
+			target = ABE1750D2EB827DA0016F4F9 /* LearningOpenGL */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		ABE175102EB827DA0016F4F9 /* LearningOpenGL */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AB61665D2ECD066800234776 /* Exceptions for "LearningOpenGL" folder in "LearningOpenGL" target */,
+			);
 			path = LearningOpenGL;
 			sourceTree = "<group>";
 		};

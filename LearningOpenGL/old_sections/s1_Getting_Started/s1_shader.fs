@@ -1,3 +1,4 @@
+// FRAGMENT SHADER FOR SECTION 1
 #version 330 core
 out vec4 FragColor;
 
