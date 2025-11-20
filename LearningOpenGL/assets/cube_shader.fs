@@ -73,9 +73,10 @@ void main()
     // general calculations / variables
     vec3 norm = normalize(Normal);
     vec3 viewDir = normalize(viewPos - FragPos);
+    vec3 result = vec3(0.0);
     
     // directional lighting
-    vec3 result = CalcDirLight(dirLight, norm, viewDir);
+    //result = CalcDirLight(dirLight, norm, viewDir);
     
     // point lighting
     for (int i = 0; i < NR_POINT_LIGHTS; i++)

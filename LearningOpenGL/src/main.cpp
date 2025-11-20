@@ -177,7 +177,7 @@ int main()
     // load and set the texture ////////
     unsigned int diffuseMap = loadTexture("assets/containerV2.png");
     unsigned int specularMap = loadTexture("assets/containerV2_specular.png");
-    unsigned int emissionMap = loadTexture("assets/matrix.jpg");
+    //unsigned int emissionMap = loadTexture("assets/matrix.jpg");
     lightingShader.use();
     lightingShader.setInt("material.diffuse", 0);
     lightingShader.setInt("material.specular", 1);
@@ -198,7 +198,7 @@ int main()
         processInput(window);
 
         // clear the screen (erase previous frame)
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClearColor(0.01f, 0.01f, 0.01f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         // set the shader
@@ -218,33 +218,33 @@ int main()
         
         // set the directional light properties
         lightingShader.setVec3("pointLights[0].position", pointLightPositions[0]);
-        lightingShader.setVec3("pointLights[0].ambient", 0.1f, 0.1f, 0.1f);
-        lightingShader.setVec3("pointLights[0].diffuse", 0.75f, 0.75f, 0.75f);
-        lightingShader.setVec3("pointLights[0].specular", 1.0f, 1.0f, 1.0f);
+        lightingShader.setVec3("pointLights[0].ambient", (0.1f * lightColor));
+        lightingShader.setVec3("pointLights[0].diffuse", (0.5f * lightColor));
+        lightingShader.setVec3("pointLights[0].specular", lightColor);
         lightingShader.setFloat("pointLights[0].constant", 1.0f);
         lightingShader.setFloat("pointLights[0].linear", 0.14);
         lightingShader.setFloat("pointLights[0].quadratic", 0.07f);
         
         lightingShader.setVec3("pointLights[1].position", pointLightPositions[1]);
-        lightingShader.setVec3("pointLights[1].ambient", 0.1f, 0.1f, 0.1f);
-        lightingShader.setVec3("pointLights[1].diffuse", 0.75f, 0.75f, 0.75f);
-        lightingShader.setVec3("pointLights[1].specular", 1.0f, 1.0f, 1.0f);
+        lightingShader.setVec3("pointLights[1].ambient", (0.1f * lightColor));
+        lightingShader.setVec3("pointLights[1].diffuse", (0.5f * lightColor));
+        lightingShader.setVec3("pointLights[1].specular", lightColor);
         lightingShader.setFloat("pointLights[1].constant", 1.0f);
         lightingShader.setFloat("pointLights[1].linear", 0.14);
         lightingShader.setFloat("pointLights[1].quadratic", 0.07f);
         
         lightingShader.setVec3("pointLights[2].position", pointLightPositions[2]);
-        lightingShader.setVec3("pointLights[2].ambient", 0.1f, 0.1f, 0.1f);
-        lightingShader.setVec3("pointLights[2].diffuse", 0.75f, 0.75f, 0.75f);
-        lightingShader.setVec3("pointLights[2].specular", 1.0f, 1.0f, 1.0f);
+        lightingShader.setVec3("pointLights[2].ambient", (0.1f * lightColor));
+        lightingShader.setVec3("pointLights[2].diffuse", (0.5f * lightColor));
+        lightingShader.setVec3("pointLights[2].specular", lightColor);
         lightingShader.setFloat("pointLights[2].constant", 1.0f);
         lightingShader.setFloat("pointLights[2].linear", 0.14);
         lightingShader.setFloat("pointLights[2].quadratic", 0.07f);
         
         lightingShader.setVec3("pointLights[3].position", pointLightPositions[3]);
-        lightingShader.setVec3("pointLights[3].ambient", 0.1f, 0.1f, 0.1f);
-        lightingShader.setVec3("pointLights[3].diffuse", 0.75f, 0.75f, 0.75f);
-        lightingShader.setVec3("pointLights[3].specular", 1.0f, 1.0f, 1.0f);
+        lightingShader.setVec3("pointLights[3].ambient", (0.1f * lightColor));
+        lightingShader.setVec3("pointLights[3].diffuse", (0.5f * lightColor));
+        lightingShader.setVec3("pointLights[3].specular", lightColor);
         lightingShader.setFloat("pointLights[3].constant", 1.0f);
         lightingShader.setFloat("pointLights[3].linear", 0.14);
         lightingShader.setFloat("pointLights[3].quadratic", 0.07f);
@@ -303,6 +303,7 @@ int main()
         lightCubeShader.use();
         lightCubeShader.setMat4("projection", projection);
         lightCubeShader.setMat4("view", view);
+        lightCubeShader.setVec3("color", lightColor);
         for (unsigned int i = 0; i < 4; i++)
         {
             // recreate the model matrix with the light pos
