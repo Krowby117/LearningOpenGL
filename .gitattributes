@@ -1,1 +1,2 @@
 .a filter=lfs diff=lfs merge=lfs -text
+LearningOpenGL/dependencies/lib/libassimp.a filter=lfs diff=lfs merge=lfs -text
