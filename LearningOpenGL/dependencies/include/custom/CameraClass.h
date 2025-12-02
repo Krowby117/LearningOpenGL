@@ -7,8 +7,6 @@
 
 //// enum for tracking movement
 enum CameraMovement{
-    UP,
-    DOWN,
     FORWARD,
     BACKWARD,
     LEFT,
@@ -80,13 +78,9 @@ class Camera
             case CameraMovement::RIGHT:
                 camPos += camRight * velocity;
                 break;
-            case CameraMovement::UP:
-                camPos += velocity * camUp;
-                break;
-            case CameraMovement::DOWN:
-                camPos -= velocity * camUp;
-                break;
         }
+        
+        camPos.y = 0.0f;
     }
 
     // handle mouse scrolling

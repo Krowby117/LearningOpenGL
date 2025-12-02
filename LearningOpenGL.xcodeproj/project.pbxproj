@@ -38,6 +38,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				old_sections/s1_Getting_Started/s1_main.cpp,
+				old_sections/s2_Lighting/s2_main.cpp,
+				old_sections/s3_Model_Loading/s3_main.cpp,
+				old_sections/some_test_stuff/cube_highlight.cpp,
+				"old_sections/some_test_stuff/main 2.cpp",
 			);
 			target = ABE1750D2EB827DA0016F4F9 /* LearningOpenGL */;
 		};
@@ -291,6 +295,8 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/assets/shaders/**",
+					"$(PROJECT_DIR)/assets/models/**",
 					"$(PROJECT_DIR)/assets/**",
 					"$(PROJECT_DIR)/dependencies/include/**",
 					"$(PROJECT_DIR)/**",
@@ -300,6 +306,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/LearningOpenGL/dependencies/lib",
 				);
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/include/**";
@@ -312,6 +319,8 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/assets/shaders/**",
+					"$(PROJECT_DIR)/assets/models/**",
 					"$(PROJECT_DIR)/assets/**",
 					"$(PROJECT_DIR)/dependencies/include/**",
 					"$(PROJECT_DIR)/**",
@@ -321,6 +330,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/LearningOpenGL/dependencies/lib",
 				);
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/include/**";
