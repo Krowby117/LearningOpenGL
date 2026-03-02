@@ -73,8 +73,8 @@ int main()
     }
 
     // use the shader class to set up shaders ////////
-    Shader lightingShader("assets/cube_shader.vs", "assets/cube_shader.fs");
-    Shader lightCubeShader("assets/light_cube.vs", "assets/light_cube.fs");
+    Shader lightingShader("old_sections/s2_Lighting/cube_shader.vs", "old_sections/s2_Lighting//cube_shader.fs");
+    Shader lightCubeShader("old_sections/s2_Lighting/light_cube.vs", "old_sections/s2_Lighting/light_cube.fs");
  
     // set up vertexes and their buffers and vertex attributes ////////
     float vertices[] = {
@@ -175,8 +175,8 @@ int main()
     glEnableVertexAttribArray(0);
     
     // load and set the texture ////////
-    unsigned int diffuseMap = loadTexture("assets/containerV2.png");
-    unsigned int specularMap = loadTexture("assets/containerV2_specular.png");
+    unsigned int diffuseMap = loadTexture("assets/sprites/containerV2.png");
+    unsigned int specularMap = loadTexture("assets/sprites/containerV2_specular.png");
     //unsigned int emissionMap = loadTexture("assets/matrix.jpg");
     lightingShader.use();
     lightingShader.setInt("material.diffuse", 0);
@@ -378,14 +378,6 @@ void processInput(GLFWwindow* window)
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
     {
        cam.doCameraMovement(CameraMovement::RIGHT, deltaTime);
-    }
-    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
-    {
-       cam.doCameraMovement(CameraMovement::UP, deltaTime);
-    }
-    if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
-    {
-       cam.doCameraMovement(CameraMovement::DOWN, deltaTime);
     }
 }
 
